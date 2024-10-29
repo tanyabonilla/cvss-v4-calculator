@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: "."
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      - "cvsscalc.local:127.0.0.1"
+    restart: unless-stopped # This will keep container running
